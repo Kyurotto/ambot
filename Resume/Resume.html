@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - John Doe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+</head>
+<style>
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+    .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style> 
+<body class="bg-fixed bg-[url('52393.jpg')] bg-no-repeat bg-center bg-cover font-sans">
+    
+    <nav class="shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex-shrink-0">
+                    <img class="h-8 w-8" src="logo.png" alt="MyPortfolio Logo">
+                    <span class="ml-2 text-xl font-bold text-white">MyPortfolio</span>
+                </div>
+                
+                
+                <div class="hidden md:block">
+                    <ul class="ml-10 flex items-baseline space-x-4" role="menubar">
+                        <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium" role="menuitem" aria-current="page">Home</a></li>
+                        <li role="none"><a href="../about/about.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">About</a></li>
+                        <li role="none"><a href="../projectss/projects.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Projects</a></li>
+                        <li role="none"><a href="../Skills/Skills.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Skills</a></li>
+                        <li role="none"><a href="../Resume/Resume.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Resume</a></li>
+                        <li role="none"><a href="../Gallery/Gallery.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Gallery</a></li>
+                        <li role="none"><a href="../Blog/Blog.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Blog</a></li>
+                        <li role="none"><a href="../Content/Content.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Contact</a></li>
+                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Custom</a></li>
+                    </ul>
+                </div>
+                
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-200" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden" role="menu">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t" role="menubar">
+                <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="../about/about.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">About</a></li>
+                <li role="none"><a href="../projectss/projects.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Projects</a></li>
+                <li role="none"><a href="../Skills/Skills.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Skills</a></li>
+                <li role="none"><a href="../Resume/Resume.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Resume</a></li>
+                <li role="none"><a href="../Gallery/Gallery.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="../Blog/Blog.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../Content/Content.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Contact</a></li>
+                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Custom</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden" role="main">
+        
+        <header class="bg-blue-600 text-white p-8 mt-5 fade-in">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">John Laurence E. Novicio</h1>
+                    <p class="text-xl text-blue-100">Junior Web Developer</p>
+                </div>
+                <button onclick="downloadPDF(event)" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg transition-colors flex items-center gap-2" aria-label="Download resume as PDF">
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                    Download PDF
+                </button>
+            </div>
+            <address class="mt-6 flex flex-wrap gap-6 text-blue-100 not-italic">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span>john.novi@email.com</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>(555) 123-4567</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <span>Dav City</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span>linkedin.com/in/John Lau</span>
+                </div>
+            </address>
+        </header>
+
+        <article class="p-8" id="resume-content">
+            
+            <section class="mb-8 fade-in" aria-labelledby="summary-heading">
+                <h2 id="summary-heading" class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Professional Summary</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Experienced software developer with 8+ years of expertise in full-stack development, cloud architecture, and team leadership. 
+                    Proven track record of delivering scalable solutions and mentoring junior developers. Passionate about clean code, 
+                    best practices, and emerging technologies.
+                </p>
+            </section>
+
+            
+            <section class="mb-8 fade-in" aria-labelledby="experience-heading">
+                <h2 id="experience-heading" class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Professional Experience</h2>
+                
+                <article class="mb-6">
+                    <header class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Senior Software Developer</h3>
+                            <p class="text-blue-600 font-medium">Tech Solutions Inc.</p>
+                        </div>
+                        <time class="text-gray-600 font-medium">2020 - Present</time>
+                    </header>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 mt-1" aria-hidden="true">•</span>
+                            <span>Led development of microservices architecture serving 1M+ daily users</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 mt-1" aria-hidden="true">•</span>
+                            <span>Mentored team of 5 junior developers and conducted code reviews</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 mt-1" aria-hidden="true">•</span>
+                            <span>Reduced application load time by 40% through optimization initiatives</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="mb-6 fade-in">
+                    <header class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Full Stack Developer</h3>
+                            <p class="text-blue-600 font-medium">Digital Innovations LLC</p>
+                        </div>
+                        <time class="text-gray-600 font-medium">2018 - 2020</time>
+                    </header>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 mt-1" aria-hidden="true">•</span>
+                            <span>Developed and maintained web applications using React, Node.js, and MongoDB</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 mt-1" aria-hidden="true">•</span>
+                            <span>Collaborated with UX/UI designers to implement responsive designs</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 mt-1" aria-hidden="true">•</span>
+                            <span>Implemented CI/CD pipelines reducing deployment time by 60%</span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            
+            <section class="mb-8 fade-in" aria-labelledby="education-heading">
+                <h2 id="education-heading" class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Education</h2>
+                
+                <article class="bg-gray-50 p-6 rounded-lg">
+                    <header class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Bachelor of Science in Information System</h3>
+                            <p class="text-blue-600 font-medium">Northlink Technology Collage</p>
+                        </div>
+                        <time class="text-gray-600 font-medium">2014 - 2018</time>
+                    </header>
+                    <dl class="text-gray-700 mt-2">
+                        <dt class="inline font-bold">GPA:</dt>
+                        <dd class="inline ml-1">3.8/4.0</dd>
+                        <br>
+                        <dt class="inline font-bold">Relevant Coursework:</dt>
+                        <dd class="inline ml-1">Data Structures, Algorithms, Database Systems, Software Engineering</dd>
+                        <br>
+                        <dt class="inline font-bold">Activities:</dt>
+                        <dd class="inline ml-1">Computer Science Club President, ACM Member</dd>
+                    </dl>
+                </article>
+            </section>
+
+            
+            <section class="mb-8 fade-in" aria-labelledby="certifications-heading">
+                <h2 id="certifications-heading" class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Certifications</h2>
+                
+                <div class="grid md:grid-cols-2 gap-4" role="list">
+                    <article class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg border-l-4 border-blue-600" role="listitem">
+                        <h3 class="font-semibold text-gray-800 mb-1">AWS Certified Solutions Architect</h3>
+                        <p class="text-gray-600 text-sm mb-1">Amazon Web Services</p>
+                        <time class="text-blue-600 font-medium">Valid: 2023 - 2026</time>
+                    </article>
+                    
+                    <article class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-lg border-l-4 border-green-600" role="listitem">
+                        <h3 class="font-semibold text-gray-800 mb-1">Certified Kubernetes Administrator</h3>
+                        <p class="text-gray-600 text-sm mb-1">Cloud Native Computing Foundation</p>
+                        <time class="text-green-600 font-medium">Valid: 2023 - 2026</time>
+                    </article>
+                    
+                    <article class="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-lg border-l-4 border-purple-600" role="listitem">
+                        <h3 class="font-semibold text-gray-800 mb-1">Professional Scrum Master I</h3>
+                        <p class="text-gray-600 text-sm mb-1">Scrum.org</p>
+                        <time class="text-purple-600 font-medium">Issued: 2022</time>
+                    </article>
+                    
+                    <article class="bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-lg border-l-4 border-orange-600" role="listitem">
+                        <h3 class="font-semibold text-gray-800 mb-1">Google Cloud Professional Developer</h3>
+                        <p class="text-gray-600 text-sm mb-1">Google Cloud</p>
+                        <time class="text-orange-600 font-medium">Valid: 2023 - 2025</time>
+                    </article>
+                </div>
+            </section>
+
+
+            <section class="mb-8 fade-in" aria-labelledby="skills-heading">
+                <h2 id="skills-heading" class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Technical Skills</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">Programming Languages</h3>
+                        <ul class="flex flex-wrap gap-2" role="list">
+                            <li role="listitem"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span></li>
+                            <li role="listitem"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span></li>
+                            <li role="listitem"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Java</span></li>
+                            <li role="listitem"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">TypeScript</span></li>
+                            <li role="listitem"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Go</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">Frameworks & Libraries</h3>
+                        <ul class="flex flex-wrap gap-2" role="list">
+                            <li role="listitem"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">React</span></li>
+                            <li role="listitem"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span></li>
+                            <li role="listitem"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Express</span></li>
+                            <li role="listitem"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Django</span></li>
+                            <li role="listitem"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Spring Boot</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">Databases</h3>
+                        <ul class="flex flex-wrap gap-2" role="list">
+                            <li role="listitem"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span></li>
+                            <li role="listitem"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span></li>
+                            <li role="listitem"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Redis</span></li>
+                            <li role="listitem"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MySQL</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">Tools & Technologies</h3>
+                        <ul class="flex flex-wrap gap-2" role="list">
+                            <li role="listitem"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Docker</span></li>
+                            <li role="listitem"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Kubernetes</span></li>
+                            <li role="listitem"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">AWS</span></li>
+                            <li role="listitem"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Git</span></li>
+                            <li role="listitem"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Jenkins</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="mb-8 fade-in" aria-labelledby="projects-heading">
+                <h2 id="projects-heading" class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Featured Projects</h2>
+                
+                <div class="space-y-6">
+                    <article class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-700 mb-3">
+                            Built a scalable e-commerce platform handling 50K+ transactions daily using React, Node.js, and PostgreSQL.
+                        </p>
+                        <ul class="flex flex-wrap gap-2" role="list" aria-label="Technologies used">
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">React</span></li>
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Node.js</span></li>
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">PostgreSQL</span></li>
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">AWS</span></li>
+                        </ul>
+                    </article>
+                    
+                    <article class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Real-time Analytics Dashboard</h3>
+                        <p class="text-gray-700 mb-3">
+                            Developed a real-time analytics dashboard processing millions of events using microservices architecture.
+                        </p>
+                        <ul class="flex flex-wrap gap-2" role="list" aria-label="Technologies used">
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Python</span></li>
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Kafka</span></li>
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">MongoDB</span></li>
+                            <li role="listitem"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Docker</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 mt-10" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <section class="fade-in">
+                    <h3 class="text-lg font-semibold mb-4">MyWebsite</h3>
+                    <p class="text-gray-400 text-sm">
+                        Creating exceptional digital experiences for businesses worldwide.
+                    </p>
+                </section>
+                
+                <section class="fade-in stagger-delay-1">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <nav>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="fade-in stagger-delay-2">
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <nav>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Design</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Development</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">SEO</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Consulting</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="fade-in stagger-delay-3">
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3> 
+                    <address class="space-y-2 text-sm text-gray-400 not-italic">
+                        <p>123 Business St.</p>
+                        <p>City, State 12345</p>
+                        <p>Phone: (555) 123-4567</p>
+                        <p>Email: hello@mywebsite.com</p>
+                    </address>
+                </section>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center fade-in-up">
+                <p class="text-gray-400 text-sm">
+                    © 2025 MyWebsite. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    
+    document.getElementById("mobile-menu-button").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+
+    
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    
+    function downloadPDF(event) {
+        try {
+            
+            if (typeof window.jspdf === 'undefined') {
+                alert('jsPDF failed to load. Please check your internet connection.');
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            
+            const name = document.querySelector('h1').textContent.trim();
+            const role = document.querySelector('.text-blue-100').textContent.trim();
+            const contacts = Array.from(document.querySelectorAll('.flex-wrap .flex'))
+                .map(el => el.textContent.trim())
+                .filter(Boolean);
+
+            const sections = document.querySelectorAll('#resume-content > section');
+
+            let yPos = 30;
+
+            
+            doc.setFontSize(20);
+            doc.setFont(undefined, 'bold');
+            doc.text(`${name} - Resume`, 20, yPos);
+            yPos += 20;
+
+            doc.setFontSize(12);
+            doc.setFont(undefined, 'normal');
+            contacts.forEach(contact => {
+                doc.text(contact, 20, yPos);
+                yPos += 10;
+            });
+
+            yPos += 10;
+
+            
+            sections.forEach(section => {
+                const title = section.querySelector('h2')?.textContent.trim() || '';
+                const contentElements = section.querySelectorAll('p, ul li, .grid div');
+
+                if (title) {
+                    doc.setFontSize(14);
+                    doc.setFont(undefined, 'bold');
+                    doc.text(title, 20, yPos);
+                    yPos += 10;
+
+                    doc.setFontSize(10);
+                    doc.setFont(undefined, 'normal');
+
+                    contentElements.forEach(el => {
+                        if (el.tagName === 'P') {
+                            const lines = doc.splitTextToSize(el.textContent.trim(), 170);
+                            doc.text(lines, 20, yPos);
+                            yPos += lines.length * 5 + 5;
+                        } else if (el.tagName === 'LI') {
+                            const bullet = '• ' + el.textContent.trim();
+                            doc.text(bullet, 25, yPos);
+                            yPos += 8;
+                        } else if (el.classList.contains('bg-gradient-to-r')) {
+                            const certTitle = el.querySelector('h3')?.textContent.trim() || '';
+                            const certOrg = el.querySelector('.text-gray-600')?.textContent.trim() || '';
+                            const certDate = el.querySelector('.font-medium')?.textContent.trim() || '';
+                            doc.text(`• ${certTitle} (${certOrg}, ${certDate})`, 25, yPos);
+                            yPos += 8;
+                        } else if (el.classList.contains('bg-blue-100') || el.classList.contains('bg-green-100')) {
+                            const skills = Array.from(el.querySelectorAll('.bg-blue-100, .bg-green-100, .bg-purple-100, .bg-orange-100'))
+                                .map(skill => skill.textContent.trim())
+                                .join(', ');
+                            doc.text(skills, 20, yPos);
+                            yPos += 8;
+                        }
+                    });
+
+                    yPos += 10;
+                }
+            });
+
+            
+            doc.save(`${name.replace(/\s+/g, '_')}_Resume.pdf`);
+
+            
+            const originalText = event.target.innerHTML;
+            event.target.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+            event.target.classList.add('bg-green-600', 'hover:bg-green-700');
+            event.target.classList.remove('bg-blue-700', 'hover:bg-blue-800');
+
+            setTimeout(() => {
+                event.target.innerHTML = originalText;
+                event.target.classList.remove('bg-green-600', 'hover:bg-green-700');
+                event.target.classList.add('bg-blue-700', 'hover:bg-blue-800');
+            }, 2000);
+
+        } catch (error) {
+            console.error('Error generating PDF:', error);
+            alert('An error occurred while generating the PDF. Please try again or refresh the page.');
+        }
+    }
+</script>
+
+</body>
+</html>

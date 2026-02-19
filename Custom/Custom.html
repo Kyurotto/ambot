@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Costum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+<style>
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+    .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>    
+</head>
+<body class="bg-fixed bg-fixed bg-[url('52393.jpg')] bg-no-repeat bg-center bg-cover font-sans">
+    
+    <nav class="shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex-shrink-0">
+                    <img class="h-8 w-8" src="logo.png" alt="MyPortfolio Logo">
+                    <span class="ml-2 text-xl font-bold text-white">MyPortfolio</span>
+                </div>
+                
+                
+                <div class="hidden md:block">
+                    <ul class="ml-10 flex items-baseline space-x-4" role="menubar">
+                        <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium" role="menuitem" aria-current="page">Home</a></li>
+                        <li role="none"><a href="../about/about.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">About</a></li>
+                        <li role="none"><a href="../projectss/projects.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Projects</a></li>
+                        <li role="none"><a href="../Skills/Skills.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Skills</a></li>
+                        <li role="none"><a href="Resume.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Resume</a></li>
+                        <li role="none"><a href="../Gallery/Gallery.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Gallery</a></li>
+                        <li role="none"><a href="../Blog/Blog.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Blog</a></li>
+                        <li role="none"><a href="../Content/Content.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Contact</a></li>
+                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Custom</a></li>
+                    </ul>
+                </div>
+                
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-200" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden" role="menu">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t" role="menubar">
+                <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="../about/about.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">About</a></li>
+                <li role="none"><a href="../projectss/" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Projects</a></li>
+                <li role="none"><a href="../Skills/" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Skills</a></li>
+                <li role="none"><a href="Resume.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Resume</a></li>
+                <li role="none"><a href="../Gallery/Gallery.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="../Blog/Blog.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../Content/Content.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Contact</a></li>
+                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Custom</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <header class="flex flex-col justify-center items-center fade-in">
+    <h1 class="text-2xl p-6 font-bold text-shadow-lg mt-10 text-white">Custom Page (Student's Choice)</h1>
+    </header>
+
+    <main class="container mx-auto py-8 p-4 fade-in">
+    <section>
+        <h1 class="text-2xl font-bold mb-4 text-white">About This Page</h1>
+        <p class="text-lg text-white">“A successful website does three things:
+            It attracts the right kinds of visitors.
+            Guides them to the main services or product you offer.
+            Collect Contact details for future ongoing relation.”</p>
+    </section>
+
+    <section class="py-8">
+        <h1 class="text-2xl font-bold mb-4 text-white">Achievements</h1>
+        <ul class="list-none p-0 m-0">
+        <li class="mb-4 text-white">Ensured cross-browser compatibility and mobile responsiveness.</li>
+        <li class="mb-4 text-white">Used Lighthouse and PageSpeed Insights for performance audits.</li>
+        <li class="mb-4 text-white">Applied best practices like component modularity, props, and state management.</li>
+        </ul>
+    </section>
+
+    <section class="py-8 flex flex-col">
+        <h1 class="text-2xl font-bold mb-4 text-white">About This Page</h1>
+        <div class="shadow-2xl p-4 rounded-lg">
+        <p class="mb-4 text-white">― 𝘕𝘰𝘷𝘪𝘤𝘪𝘰</p>
+        <p class="text-white">“𝘞𝘦𝘣𝘴𝘪𝘵𝘦 𝘸𝘪𝘵𝘩𝘰𝘶𝘵 𝘷𝘪𝘴𝘪𝘵𝘰𝘳𝘴 𝘪𝘴 𝘭𝘪𝘬𝘦 𝘢 𝘴𝘩𝘪𝘱 𝘭𝘰𝘴𝘵 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘰𝘳𝘪𝘻𝘰𝘯.”</p>
+        </div>
+    </section>
+
+    <section class="py-8 flex flex-col">
+        <div class="shadow-2xl p-4 rounded-lg">
+        <p class="mb-4 text-white">― 𝘕𝘰𝘷𝘪𝘤𝘪𝘰</p>
+        <p class="text-white">“𝘎𝘦𝘵𝘵𝘪𝘯𝘨 𝘢 𝘲𝘶𝘢𝘭𝘪𝘵𝘺 𝘸𝘦𝘣𝘴𝘪𝘵𝘦 𝘪𝘴 𝘯𝘰𝘵 𝘢𝘯 𝘦𝘹𝘱𝘦𝘯𝘴𝘦𝘴 𝘣𝘶𝘵 𝘳𝘢𝘵𝘩𝘦𝘳 𝘢𝘯 𝘪𝘯𝘷𝘦𝘴𝘵𝘮𝘦𝘯𝘵.”</p>
+        </div>
+    </section>
+
+    <section class="py-8 mb-8">
+        <h2 class="text-xl font-bold mb-4 text-white">FAQs</h2>
+        <details class="mb-4">
+        <summary class="font-bold cursor-pointer text-white">What services do you offer?</summary>
+        <p class="text-gray-700 mt-2 text-white">
+            We provide web development, UI/UX design, and digital marketing services.
+        </p>
+        </details>
+        <details class="mb-4">
+        <summary class="font-bold cursor-pointer text-white">How long does a project take?</summary>
+        <p class="text-gray-700 mt-2 text-white">
+            Project timelines vary based on scope and complexity, typically ranging from 2 to 6 weeks.
+        </p>
+        </details>
+    </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 mt-64 sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <article class="fade-in">
+            <h3 class="text-lg font-semibold mb-4 text-white">MyWebsite</h3>
+            <p class="text-gray-400 text-sm text-white">
+            Creating exceptional digital experiences for businesses worldwide.
+            </p>
+        </article>
+
+        <nav class="fade-in stagger-delay-1" aria-label="Quick Links">
+            <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <ul class="space-y-2 text-sm list-none p-0 m-0">
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">Portfolio</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="fade-in stagger-delay-2" aria-label="Services">
+            <h3 class="text-lg font-semibold mb-4 text-white">Services</h3>
+            <ul class="space-y-2 text-sm list-none p-0 m-0">
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">Web Design</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">SEO</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">Consulting</a></li>
+            </ul>
+        </nav>
+
+        <address class="fade-in stagger-delay-3 not-italic">
+            <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+            <div class="space-y-2 text-sm text-gray-400">
+            <p class="text-white">123 Business St.</p>
+            <p class="text-white">City, State 12345</p>
+            <p class="text-white">Phone: (555) 123-4567</p>
+            <p class="text-white">Email: hello@mywebsite.com</p>
+            </div>
+        </address>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center fade-in">
+        <p class="text-gray-400 text-sm text-white">
+            © 2025 MyWebsite. All rights reserved.
+        </p>
+        </div>
+    </div>
+    </footer>
+
+    <script>
+        document.getElementById("mobile-menu-button").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+
+    
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Animate only once
+        }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+    </script>
+
+</body>
+</html>

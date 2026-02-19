@@ -1,0 +1,335 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css " />
+    <script src="https://cdn.tailwindcss.com "></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui @5" rel="stylesheet" />
+    </head>
+    <style>
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    </style>
+    <body class="bg-fixed bg-[url(52393.jpg)] bg-no-repeat bg-center bg-cover font-sans">
+    
+    
+    <header class="shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-8" src="logo.png" alt="MyWebsite Logo">
+                    <span class="ml-2 text-xl font-bold text-white">MyPortfolio</span>
+                </div>
+                
+                
+                <div class="hidden md:block">
+                    <ul class="ml-10 flex items-baseline space-x-4" role="menubar">
+                        <li role="none"><a href="port1.html" class="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium" role="menuitem" aria-current="page">Home</a></li>
+                        <li role="none"><a href="../about/about.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">About</a></li>
+                        <li role="none"><a href="../projectss/projects.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Projects</a></li>
+                        <li role="none"><a href="../Skills/Skills.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Skills</a></li>
+                        <li role="none"><a href="../Resume/Resume.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Resume</a></li>
+                        <li role="none"><a href="../Gallery/Gallery.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Gallery</a></li>
+                        <li role="none"><a href="../Blog/Blog.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Blog</a></li>
+                        <li role="none"><a href="../Content/Content.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Contact</a></li>
+                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Custom</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-200" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        
+        <div id="mobile-menu" class="md:hidden hidden" role="menu">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <li role="none"><a href="port1.html" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="../about/about.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">About</a></li>
+                <li role="none"><a href="../projectss/projects.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Projects</a></li>
+                <li role="none"><a href="../Skills/Skills.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Skills</a></li>
+                <li role="none"><a href="../Resume/Resume.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Resume</a></li>
+                <li role="none"><a href="../Gallery/Gallery.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="../Blog/Blog.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../Content/Content.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Contact</a></li>
+                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Custom</a></li>
+            </ul>
+        </div>
+    </header>
+
+    
+    <section class="flex justify-center items-center mt-16" aria-labelledby="skills-heading">
+        <h1 id="skills-heading" class="text-4xl font-bold pb-5 fade-in">My Skills</h1>
+    </section>
+
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 fade-in" aria-labelledby="skills-overview">
+        <h2 id="skills-overview" class="sr-only">Skills Overview</h2>
+        
+        
+        <section class="bg-white shadow-lg rounded-lg p-8 mb-8" aria-labelledby="technical-skills">
+        <h3 id="technical-skills" class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+            <i class="fa-solid fa-code text-purple-600 mr-3" aria-hidden="true"></i>
+            Technical Skills
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">HTML</span>
+                <span class="text-sm text-gray-500">90%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+                <div class="bg-orange-500 h-3 rounded-full" style="width: 90%"></div>
+            </div>
+            </div>
+
+            <div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">CSS</span>
+                <span class="text-sm text-gray-500">90%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+                <div class="bg-blue-500 h-3 rounded-full" style="width: 90%"></div>
+            </div>
+            </div>
+
+            <div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">JAVASCRIPT</span>
+                <span class="text-sm text-gray-500">30%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+                <div class="bg-yellow-500 h-3 rounded-full" style="width: 30%"></div>
+            </div>
+            </div>
+
+            <div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">TAILWIND</span>
+                <span class="text-sm text-gray-500">50%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+                <div class="bg-blue-300 h-3 rounded-full" style="width: 50%"></div>
+            </div>
+            </div>
+
+            <div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">BOOTSTRAP</span>
+                <span class="text-sm text-gray-500">30%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+                <div class="bg-purple-500 h-3 rounded-full" style="width: 30%"></div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        
+        <section class="bg-white shadow-lg rounded-lg p-8 mb-8" aria-labelledby="visual-indicators">
+        <h3 id="visual-indicators" class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+            <i class="fas fa-chart-line text-purple-600 mr-3" aria-hidden="true"></i>
+            Visual Indicators
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="text-center">
+            <div class="mb-4">
+                <i class="fas fa-star text-4xl text-yellow-400" aria-hidden="true"></i>
+                <i class="fas fa-star text-4xl text-yellow-400" aria-hidden="true"></i>
+                <i class="far fa-star text-4xl text-gray-300" aria-hidden="true"></i>
+                <i class="far fa-star text-4xl text-gray-300" aria-hidden="true"></i>
+                <i class="far fa-star text-4xl text-gray-300" aria-hidden="true"></i>
+            </div>
+            <h4 class="font-semibold text-gray-700">Junior Level</h4>
+            <p class="text-sm text-gray-500">Frontend Development</p>
+            </div>
+
+            <div class="text-center">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-white font-bold text-xl">40%</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-gray-700">Proficiency</h3>
+                    <p class="text-sm text-gray-500">FrontEnd Development</p>
+                </div>
+
+                <div class="text-center">
+            <div class="mb-4">
+                <i class="fas fa-circle text-3xl text-green-500" aria-hidden="true"></i>
+                <i class="fas fa-circle text-3xl text-green-500" aria-hidden="true"></i>
+                <i class="far fa-circle text-3xl text-gray-300" aria-hidden="true"></i>
+                <i class="far fa-circle text-3xl text-gray-300" aria-hidden="true"></i>
+                <i class="far fa-circle text-3xl text-gray-300" aria-hidden="true"></i>
+            </div>
+            <h4 class="font-semibold text-gray-700">Junior Level</h4>
+            <p class="text-sm text-gray-500">Frontend Development</p>
+            </div>
+        </section>
+
+
+        <section class="bg-white shadow-lg rounded-lg p-8" aria-labelledby="soft-skills">
+        <h3 id="soft-skills" class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+            <i class="fas fa-users text-green-600 mr-3" aria-hidden="true"></i>
+            Soft Skills
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="flex items-center p-4 bg-blue-50 rounded-lg">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-handshake text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Teamwork</h3>
+                        <p class="text-sm text-gray-600">Collaborative approach</p>
+                    </div>
+                </div>
+
+                
+                <div class="flex items-center p-4 bg-green-50 rounded-lg">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-comments text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Communication</h3>
+                        <p class="text-sm text-gray-600">Clear & effective</p>
+                    </div>
+                </div>
+
+                
+                <div class="flex items-center p-4 bg-purple-50 rounded-lg">
+                    <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-lightbulb text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Problem Solving</h3>
+                        <p class="text-sm text-gray-600">Analytical thinking</p>
+                    </div>
+                </div>
+
+                
+                <div class="flex items-center p-4 bg-red-50 rounded-lg">
+                    <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-crown text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Leadership</h3>
+                        <p class="text-sm text-gray-600">Guide & inspire</p>
+                    </div>
+                </div>
+
+                
+                <div class="flex items-center p-4 bg-yellow-50 rounded-lg">
+                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-sync-alt text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Adaptability</h3>
+                        <p class="text-sm text-gray-600">Quick learner</p>
+                    </div>
+                </div>
+
+                
+                <div class="flex items-center p-4 bg-indigo-50 rounded-lg">
+                    <div class="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-clock text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800">Time Management</h3>
+                        <p class="text-sm text-gray-600">Efficient & organized</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="bg-gray-900 text-white py-12 mt-10" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <section class="fade-in">
+            <h3 class="text-lg font-semibold mb-4">MyWebsite</h3>
+            <p class="text-gray-400 text-sm">
+                Creating exceptional digital experiences for businesses worldwide.
+            </p>
+            </section>
+            <section class="fade-in stagger-delay-1">
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+            </section>
+            <section class="fade-in stagger-delay-2">
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Design</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Development</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">SEO</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Consulting</a></li>
+            </ul>
+            </section>
+            <section class="fade-in stagger-delay-3">
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <address class="not-italic space-y-2 text-sm text-gray-400">
+                <p>123 Business St.</p>
+                <p>City, State 12345</p>
+                <p>Phone: <a href="tel:5551234567">(555) 123-4567</a></p>
+                <p>Email: <a href="mailto:hello@mywebsite.com">hello@mywebsite.com</a></p>
+            </address>
+            </section>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center fade-in">
+            <p class="text-gray-400 text-sm">
+            © 2025 MyWebsite. All rights reserved.
+            </p>
+        </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        document.getElementById("mobile-menu-button").addEventListener("click", () => {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+        const expanded = menu.classList.contains("hidden") ? "false" : "true";
+        document.getElementById("mobile-menu-button").setAttribute("aria-expanded", expanded);
+        });
+
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+            }
+        });
+        }, { threshold: 0.1 });
+
+        faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+        });
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tailwind Tree View</title>
+    <script src="https://cdn.tailwindcss.com "></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui @5" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css "
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    </head>
+    <body class="p-6 bg-gray-50">
+
+    <div class="max-w-md mx-auto">
+        <ul class="space-y-2 text-gray-800">
+        <li>
+            <details class="group" open>
+            <summary class="list-none cursor-pointer font-semibold flex items-center gap-2 select-none p-2 rounded hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+                <i class="fas fa-chevron-right transition-transform duration-200 group-open:rotate-90"></i>
+                Root Node
+            </summary>
+            <ul class="ml-6 mt-2 space-y-2">
+                <li>
+                <details class="group">
+                    <summary class="list-none cursor-pointer flex items-center gap-2 select-none p-2 rounded hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+                    <i class="fas fa-chevron-right transition-transform duration-200 group-open:rotate-90"></i>
+                    Child Node 1
+                    </summary>
+                    <ul class="ml-6 mt-2 space-y-1">
+                    <li class="p-1 hover:bg-gray-100 rounded">Leaf 1</li>
+                    <li class="p-1 hover:bg-gray-100 rounded">Leaf 2</li>
+                    </ul>
+                </details>
+                </li>
+                <li class="select-none p-1 hover:bg-gray-100 rounded">Child Node 2</li>
+            </ul>
+            </details>
+        </li>
+        </ul>
+    </div>
+
+    </body>
+    </html>

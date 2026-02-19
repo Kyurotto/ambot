@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style>
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+    .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>  
+
+<body class="bg-fixed bg-fixed bg-[url('52393.jpg')] bg-no-repeat bg-center bg-cover font-sans">
+    
+    <nav class="shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex-shrink-0">
+                    <img class="h-8 w-8" src="logo.png" alt="MyPortfolio Logo">
+                    <span class="ml-2 text-xl font-bold text-white">MyPortfolio</span>
+                </div>
+                
+                
+                <div class="hidden md:block">
+                    <ul class="ml-10 flex items-baseline space-x-4" role="menubar">
+                        <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium" role="menuitem" aria-current="page">Home</a></li>
+                        <li role="none"><a href="../about/about.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">About</a></li>
+                        <li role="none"><a href="../projectss/projects.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Projects</a></li>
+                        <li role="none"><a href="../Skills/Skills.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Skills</a></li>
+                        <li role="none"><a href="Resume.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Resume</a></li>
+                        <li role="none"><a href="../Gallery/Gallery.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Gallery</a></li>
+                        <li role="none"><a href="../Blog/Blog.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Blog</a></li>
+                        <li role="none"><a href="../Content/Content.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Contact</a></li>
+                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Custom</a></li>
+                    </ul>
+                </div>
+                
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-200" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden" role="menu">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t" role="menubar">
+                <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="../about/about.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">About</a></li>
+                <li role="none"><a href="../projectss/" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Projects</a></li>
+                <li role="none"><a href="../Skills/" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Skills</a></li>
+                <li role="none"><a href="Resume.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Resume</a></li>
+                <li role="none"><a href="../Gallery/Gallery.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="../Blog/Blog.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../Content/Content.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Contact</a></li>
+                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Custom</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6 py-8 px-4">
+    <header class="flex justify-center items-center p-8 flex-col">
+        <h1 class="text-5xl font-bold text-shadow-lg text-white">My Blog</h1>
+        <p class="text-lg mt-5 text-white">Welcome to my personal blog</p>
+    </header>
+
+    <article class="bg-white p-6 rounded-lg fade-in">
+        <h1 class="text-2xl font-bold">The Future of Web Development</h1>
+        <p class="mt-3">December 15, 2025</p>
+        <p class="mt-3">Web development continues to evolve at a rapid pace, with new frameworks and technologies emerging regularly. 
+        As we look toward the future, several trends are shaping how we build and interact with web applications. 
+        From serverless architectures to progressive web apps, developers are finding innovative ways to create faster, more efficient, and user-friendly experiences.</p>
+
+        <p class="mt-10">One of the most significant shifts we're seeing is the move toward component-based development and the adoption of modern JavaScript frameworks. 
+        These tools not only improve developer productivity but also enhance the overall user experience by enabling more dynamic and responsive interfaces.
+        As browsers become more capable and internet speeds increase globally, we can expect even more sophisticated web applications that blur the line between web and native apps.</p>
+    </article>
+
+    <article class="bg-white p-6 rounded-lg mt-10 fade-in">
+        <h1 class="text-2xl font-bold">My Breakthrough</h1>
+        <p class="mt-3">April 15, 2025</p>
+        <p class="mt-3">This cycle was something I followed and I found a method that allowed me to go from having some understanding of HTML, CSS and Javascript to being a professional web developer in only a short time. 
+        Using what I learned, I jumped from a regular job that brought in $30,000 a year to freelance web work, making near twice as much by choosing my own clients and location and feeling happier.</p>
+
+        <p class="mt-10">I still had more to do at that point. I ended up with a great full-time job two years later and continued providing services myself whenever I could.  
+        I enjoy my work much more than I used to. I no longer live the same way I once did.Just a few years ago, some of these goals I have now would have been impossible to consider. 
+        I’m getting a chance to reach for new dreams now while writing from Seattle.</p>
+    </article>
+
+    <article class="bg-white p-6 rounded-lg mt-10 fade-in">
+        <h1 class="text-2xl font-bold">Using a Big Goal for Leverage</h1>
+        <p class="mt-3">December 15, 2024</p>
+        <p class="mt-3">Motivation for me wasn’t a magical thing, but it was surprisingly effective, so I might as well say it was. I created a Big Goal — an achievement I hoped for in no more than a year or two that would make a real difference for me. 
+        My goal was not to live life on the same financial level that I had in Knoxville, but to move to Seattle, where costs are roughly twice as high. A reasonable thing to aspire to, but it won’t be easy. 
+        I figured learning web development would help me achieve my goals.</p>
+
+        <p class="mt-10">Why I wanted to move isn’t important, but it kept me thinking about it constantly. 
+        Since taking on every part of a career as a freelancer would be hard work (learning, looking for jobs, setting my prices, doing the paperwork, considering offers…), I came up with several ways to remember the goal.
+        Looking for fantasy apartments was something I often did on Craigslist. To remind myself of what I’m aiming for, I put posters in my work area. I signed up for emails about what’s going on in Seattle. 
+        When the going got rough, I tried to remember what my goal was as much as I could.</p>
+    </article>
+
+    <article class="bg-white p-6 rounded-lg mt-10 fade-in">
+        <h1 class="text-2xl font-bold">Your Next Steps</h1>
+        <p class="mt-3">December 15, 2024</p>
+        <p class="mt-3">Now, think about what they say. Stop missing your targets in life. Consider these simple steps to get you — and keep you — moving toward a career in web development:</p>
+
+        <p class="mt-10">Figure out what your biggest goal is.</p>
+        <ol class="list-decimal ml-5 space-y-2">
+        <li>Think about your Big Goal often and in several ways.</li>
+        <li>Start learning!</li>
+        <li>Here’s a little help with your initial step.</li>
+        </ol>
+        <p class="mt-3">Click yes below and I’ll show you how to discover your dream so you know how to push through when you need to.</p>
+    </article>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <article class="fade-in">
+            <h3 class="text-lg font-semibold mb-4">MyWebsite</h3>
+            <p class="text-gray-400 text-sm">
+            Creating exceptional digital experiences for businesses worldwide.
+            </p>
+        </article>
+
+        <nav class="fade-in stagger-delay-1" aria-label="Quick Links">
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="fade-in stagger-delay-2" aria-label="Services">
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Design</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">SEO</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Consulting</a></li>
+            </ul>
+        </nav>
+
+        <address class="fade-in stagger-delay-3 not-italic">
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <div class="space-y-2 text-sm text-gray-400">
+            <p>123 Business St.</p>
+            <p>City, State 12345</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Email: hello@mywebsite.com</p>
+            </div>
+        </address>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center fade-in">
+        <p class="text-gray-400 text-sm">
+            © 2025 MyWebsite. All rights reserved.
+        </p>
+        </div>
+    </div>
+    </footer>
+
+<script>
+    
+    document.getElementById("mobile-menu-button").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+
+    
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Animate only once
+        }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
+</body>
+</html>
