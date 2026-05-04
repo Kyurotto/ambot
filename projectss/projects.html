@@ -67,11 +67,11 @@ crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     
     <section class="flex justify-center items-center mt-16">
-        <h1 class="text-4xl font-bold pb-5 text-white fade-in">My Projects</h1>
+        <h1 class="text-4xl font-bold pb-5 text-white">My Projects</h1>
     </section>
 
     
-    <main class="max-w-6xl mx-auto px-4 py-12 fade-in" aria-labelledby="projects-heading">
+    <main class="max-w-6xl mx-auto px-4 py-12" aria-labelledby="projects-heading">
         <h2 id="projects-heading" class="sr-only">Featured Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
@@ -175,13 +175,13 @@ crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <footer class="bg-gray-900 text-white py-12 mt-3" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="fade-in">
+            <div>
             <h3 class="text-lg font-semibold mb-4">MyWebsite</h3>
             <p class="text-gray-400 text-sm">
                 Creating exceptional digital experiences for businesses worldwide.
             </p>
             </div>
-            <div class="fade-in stagger-delay-1">
+            <div>
             <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
             <ul class="space-y-2 text-sm">
                 <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
@@ -190,7 +190,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"/>
                 <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
             </ul>
             </div>
-            <div class="fade-in stagger-delay-2">
+            <div>
             <h3 class="text-lg font-semibold mb-4">Services</h3>
             <ul class="space-y-2 text-sm">
                 <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Design</a></li>
@@ -199,7 +199,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"/>
                 <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Consulting</a></li>
             </ul>
             </div>
-            <div class="fade-in stagger-delay-3">
+            <div>
             <h3 class="text-lg font-semibold mb-4">Contact</h3>
             <address class="not-italic space-y-2 text-sm text-gray-400">
                 <p>123 Business St.</p>
@@ -209,7 +209,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"/>
             </address>
             </div>
         </div>
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center fade-in">
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
             <p class="text-gray-400 text-sm">
             © 2025 MyWebsite. All rights reserved.
             </p>
@@ -226,19 +226,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"/>
         document.getElementById("mobile-menu-button").setAttribute("aria-expanded", expanded);
         });
 
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-            }
-        });
-        }, { threshold: 0.1 });
 
-        faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-        });
     </script>
 
     </body>

@@ -11,25 +11,15 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-    <style>
-    .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-    .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-</style>    
+    
 </head>
-<body class="bg-fixed bg-fixed bg-[url('52393.jpg')] bg-no-repeat bg-center bg-cover font-sans">
+<body class="bg-fixed bg-[url('52393.jpg')] bg-no-repeat bg-center bg-cover font-sans">
     
     <nav class="shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 
-                <div class="flex-shrink-0">
+                <div class="shrink-0">
                     <img class="h-8 w-8" src="logo.png" alt="MyPortfolio Logo">
                     <span class="ml-2 text-xl font-bold text-white">MyPortfolio</span>
                 </div>
@@ -76,12 +66,12 @@
     </nav>
     
     <main class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-  <header class="sm:mx-auto sm:w-full sm:max-w-sm fade-in">
+  <header class="sm:mx-auto sm:w-full sm:max-w-sm">
     <h2 class="mt-10 text-center text-4xl font-bold tracking-tight text-white">Contact Us</h2>
     <p class="mt-5 text-center tracking-tight text-gray-900 text-white">We'd love to hear from you. Send us a message!</p>
   </header>
 
-  <section class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm shadow-2xl p-8 rounded-lg fade-in">
+  <section class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm shadow-2xl p-8 rounded-lg">
     <form class="space-y-6" action="#" method="POST">
       <div>
         <label for="email" class="block text-sm/6 font-medium text-white">Email address</label>
@@ -111,14 +101,14 @@
 <footer class="bg-gray-900 text-white py-12 mt-64 sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <article class="fade-in">
+        <article>
             <h3 class="text-lg font-semibold mb-4 text-white">MyWebsite</h3>
             <p class="text-gray-400 text-sm text-white">
             Creating exceptional digital experiences for businesses worldwide.
             </p>
         </article>
 
-        <nav class="fade-in stagger-delay-1" aria-label="Quick Links">
+        <nav aria-label="Quick Links">
             <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul class="space-y-2 text-sm list-none p-0 m-0">
             <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">About Us</a></li>
@@ -128,7 +118,7 @@
             </ul>
         </nav>
 
-        <nav class="fade-in stagger-delay-2" aria-label="Services">
+        <nav aria-label="Services">
             <h3 class="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul class="space-y-2 text-sm list-none p-0 m-0">
             <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-white">Web Design</a></li>
@@ -138,7 +128,7 @@
             </ul>
         </nav>
 
-        <address class="fade-in stagger-delay-3 not-italic">
+        <address class="not-italic">
             <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
             <div class="space-y-2 text-sm text-gray-400">
             <p class="text-white">123 Business St.</p>
@@ -149,7 +139,7 @@
         </address>
         </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center fade-in">
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
         <p class="text-gray-400 text-sm text-white">
             © 2025 MyWebsite. All rights reserved.
         </p>
@@ -163,22 +153,7 @@
     });
 
     
-    const faders = document.querySelectorAll('.fade-in');
 
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Animate only once
-        }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
 </script>
 
 </body>
