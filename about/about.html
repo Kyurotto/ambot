@@ -12,15 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
     <style>
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+
     </style>    
 </head>
 <body class="bg-fixed bg-[url(52393.jpg)] bg-no-repeat bg-center bg-cover font-sans text-gray-300 ">
@@ -86,11 +78,11 @@
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 
                 <div class="flex-shrink-0">
-                    <img src="prof.jpg" alt="John Laurence Novicio - Profile Picture" class="rounded-full w-48 sm:w-64 md:w-80 lg:w-96 shadow-xl fade-in" />
+                    <img src="prof.jpg" alt="John Laurence Novicio - Profile Picture" class="rounded-full w-48 sm:w-64 md:w-80 lg:w-96 shadow-xl" />
                 </div>
 
                 
-                <article class="w-full md:w-1/2 p-6 rounded-lg backdrop-blur-sm shadow-lg bg-black bg-opacity-30 fade-in">
+                <article class="w-full md:w-1/2 p-6 rounded-lg backdrop-blur-sm shadow-lg bg-black bg-opacity-30">
                     <p class="text-xl text-white leading-relaxed">
                         Hi, everyone! My name is <strong>John Laurence E. Novicio</strong>. I'm a Front End Developer, practicing this year to improve my coding skills. Creating programs is not just a job, but also an art that has aesthetic value.
                     </p>
@@ -119,7 +111,7 @@
     
     <footer class="bg-gray-900 text-white py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 fade-in">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 
                 <div>
                     <h2 class="text-lg font-semibold mb-4">MyWebsite</h2>
@@ -162,7 +154,7 @@
             
             
             <div class="mt-10 pt-6 text-center border-t border-gray-800">
-                <p class="text-gray-400 text-sm fade-in">&copy; 2025 MyWebsite. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">&copy; 2025 MyWebsite. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -178,19 +170,7 @@
         });
 
         
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
 
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
     </script>
 
 </body>
