@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="../output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
 </head>
 <style>
     .fade-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
     .fade-in.visible {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
 }
 </style> 
 <body class="bg-fixed bg-[url('52393.jpg')] bg-no-repeat bg-center bg-cover font-sans">
@@ -37,15 +37,15 @@
                 
                 <div class="hidden md:block">
                     <ul class="ml-10 flex items-baseline space-x-4" role="menubar">
-                        <li role="none"><a href="../port/port1.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Home</a></li>
+                        <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium" role="menuitem" aria-current="page">Home</a></li>
                         <li role="none"><a href="../about/about.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">About</a></li>
                         <li role="none"><a href="../projectss/projects.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Projects</a></li>
                         <li role="none"><a href="../Skills/Skills.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Skills</a></li>
-                        <li role="none"><a href="Resume.html" class="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium" role="menuitem" aria-current="page">Resume</a></li>
+                        <li role="none"><a href="../Resume/Resume.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Resume</a></li>
                         <li role="none"><a href="../Gallery/Gallery.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Gallery</a></li>
                         <li role="none"><a href="../Blog/Blog.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Blog</a></li>
                         <li role="none"><a href="../Content/Content.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Contact</a></li>
-                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Insights</a></li>
+                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Custom</a></li>
                     </ul>
                 </div>
                 
@@ -62,15 +62,15 @@
         
         <div id="mobile-menu" class="md:hidden hidden" role="menu">
             <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t" role="menubar">
-                <li role="none"><a href="../port/port1.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Home</a></li>
+                <li role="none"><a href="../port/port1.html" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium" role="menuitem" aria-current="page">Home</a></li>
                 <li role="none"><a href="../about/about.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">About</a></li>
                 <li role="none"><a href="../projectss/projects.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Projects</a></li>
                 <li role="none"><a href="../Skills/Skills.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Skills</a></li>
-                <li role="none"><a href="Resume.html" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium" role="menuitem" aria-current="page">Resume</a></li>
+                <li role="none"><a href="../Resume/Resume.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Resume</a></li>
                 <li role="none"><a href="../Gallery/Gallery.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Gallery</a></li>
                 <li role="none"><a href="../Blog/Blog.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Blog</a></li>
                 <li role="none"><a href="../Content/Content.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Contact</a></li>
-                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Insights</a></li>
+                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Custom</a></li>
             </ul>
         </div>
     </nav>

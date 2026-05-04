@@ -7,53 +7,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="../output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         
         .fade-in-up {
-            opacity: 1;
-            transform: none;
-            transition: none;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
         }
         
         .fade-in-up.animate {
             opacity: 1;
-            transform: none;
+            transform: translateY(0);
         }
         
         .fade-in-left {
-            opacity: 1;
-            transform: none;
-            transition: none;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
         }
         
         .fade-in-left.animate {
             opacity: 1;
-            transform: none;
+            transform: translateX(0);
         }
         
         .fade-in-right {
-            opacity: 1;
-            transform: none;
-            transition: none;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
         }
         
         .fade-in-right.animate {
             opacity: 1;
-            transform: none;
+            transform: translateX(0);
         }
         
         .scale-in {
-            opacity: 1;
-            transform: none;
-            transition: none;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.7s ease-out;
         }
         
         .scale-in.animate {
             opacity: 1;
-            transform: none;
+            transform: scale(1);
         }
         
         .stagger-delay-1 { transition-delay: 0.1s; }
@@ -71,7 +71,7 @@
                 
                 
                 <div class="flex-shrink-0 flex items-center">
-                    <img class="h-8 w-8" src="logo.png" alt="MyWebsite Logo">
+                    <img class="h-8 w-8" src="" alt="MyWebsite Logo">
                     <span class="ml-2 text-xl font-bold text-white">MyPortfolio</span>
                 </div>
                 
@@ -86,7 +86,7 @@
                         <li role="none"><a href="../Gallery/Gallery.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Gallery</a></li>
                         <li role="none"><a href="../Blog/Blog.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Blog</a></li>
                         <li role="none"><a href="../Content/Content.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Contact</a></li>
-                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Insights</a></li>
+                        <li role="none"><a href="../Custom/Custom.html" class="text-white hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" role="menuitem">Custom</a></li>
                     </ul>
                 </div>
                 
@@ -112,7 +112,7 @@
                 <li role="none"><a href="../Gallery/Gallery.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Gallery</a></li>
                 <li role="none"><a href="../Blog/Blog.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Blog</a></li>
                 <li role="none"><a href="../Content/Content.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Contact</a></li>
-                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Insights</a></li>
+                <li role="none"><a href="../Custom/Custom.html" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Custom</a></li>
             </ul>
         </div>
     </header>
