@@ -1,0 +1,25 @@
+{
+  "name": "ambot",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for John Laurence Novicio. The site includes sections for an about page, projects, skills, resume, gallery, blog, contact, and a custom page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyurotto/ambot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Kyurotto/ambot/issues"
+  },
+  "homepage": "https://github.com/Kyurotto/ambot#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}

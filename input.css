@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-opacity-0 {
+    background-color: transparent !important;
+  }
+  .group:hover .group-hover\:bg-opacity-50 {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  .bg-opacity-90 {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+  .bg-opacity-30 {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+body {
+  background-image: url('52393.jpg') !important;
+}
